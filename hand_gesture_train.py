@@ -48,3 +48,12 @@ validation_generator = validation_datagen.flow_from_directory('HandGestureDatase
                                                               color_mode='grayscale',
                                                               class_mode='categorical',
                                                               classes=['NONE', 'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE'])
+
+callback_list = [EarlyStopping(monitor='val_loss', patience=10),
+                 ModelCheckpoint(filepath='model.keras', monitor='val_loss', save_best_only=True, verbose=1)]
+
+model.fit(train_generator,
+          steps_per_epoch= 17,
+          epochs=15,
+          validation_data=validation_generator,
+          callbacks=callback_list)
