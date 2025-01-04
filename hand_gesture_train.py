@@ -24,3 +24,18 @@ model.add(Dense(256, activation='softmax'))
 
 # Compile the model
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+# Train the model
+train_datagen = ImageDataGenerator(rescale=1. / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True)
+validation_datagen = ImageDataGenerator(rescale=1. / 255)
+
+train_generator = train_datagen.flow_from_directory('HandGestureDataset/train',
+                                                    target_size=(256, 256),
+                                                    batch_size=32,
+                                                    class_mode='categorical',
+                                                    classes=['0', '1', '2', '3', '4', '5'])
+validation_generator = validation_datagen.flow_from_directory('HandGestureDataset/test',
+                                                              target_size=(256, 256),
+                                                              batch_size=32,
+                                                              class_mode='categorical',
+                                                              classes=['0', '1', '2', '3', '4', '5'])
