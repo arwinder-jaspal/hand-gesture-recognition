@@ -33,9 +33,10 @@ train_generator = train_datagen.flow_from_directory('HandGestureDataset/train',
                                                     target_size=(256, 256),
                                                     batch_size=32,
                                                     class_mode='categorical',
-                                                    classes=['0', '1', '2', '3', '4', '5'])
+                                                    classes=['NONE', 'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE'])
+
 validation_generator = validation_datagen.flow_from_directory('HandGestureDataset/test',
                                                               target_size=(256, 256),
                                                               batch_size=32,
                                                               class_mode='categorical',
-                                                              classes=['0', '1', '2', '3', '4', '5'])
+                                                              classes=['NONE', 'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE'])
