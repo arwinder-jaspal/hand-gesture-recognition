@@ -1,6 +1,7 @@
 from keras.api.models import Sequential
 from keras.api.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 from keras._tf_keras.keras.preprocessing.image import ImageDataGenerator
+from keras.api.callbacks import EarlyStopping, ModelCheckpoint
 
 # Create a Sequential model
 model = Sequential()
