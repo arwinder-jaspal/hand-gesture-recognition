@@ -6,7 +6,7 @@ from keras._tf_keras.keras.preprocessing.image import ImageDataGenerator
 model = Sequential()
 
 # Add convolutional layers to the model
-model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(256, 256, 3)))
+model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(256, 256, 1)))
 model.add(MaxPooling2D((2, 2)))
 model.add(Conv2D(64, (3, 3), activation='relu'))
 model.add(MaxPooling2D((2, 2)))
