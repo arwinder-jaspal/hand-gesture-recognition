@@ -1,5 +1,7 @@
 # Hand Gesture Recognition using CNN
 
+**Demo can be found [here](https://github.com/arwinder-jaspal/hand-gesture-recognition?tab=readme-ov-file#demo)**
+
 This project is a hand gesture recognition system using a Convolutional Neural Network (CNN). The system is trained on a dataset of images of hand gestures, and can classify new images into one of six categories: "NONE", "ONE", "TWO", "THREE", "FOUR", or "FIVE".
 
 ## Technologies Used
@@ -134,7 +136,7 @@ If you have any questions or issues, please contact the project maintainer at th
 
 ## Demo
 Training: 
-[Training Demo](https://github.com/user-attachments/assets/c2efe126-b8f9-4d38-8ef4-811cdb3c3eb2)
+[Training Video](https://github.com/user-attachments/assets/c2efe126-b8f9-4d38-8ef4-811cdb3c3eb2)
 
 Testing:
-[Testing Demo](https://github.com/user-attachments/assets/5ee9caf6-be70-42f6-98fa-e6a562bff80c)
+![Testing Demo](https://github.com/user-attachments/assets/5ee9caf6-be70-42f6-98fa-e6a562bff80c)
