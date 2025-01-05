@@ -43,7 +43,7 @@ train_generator = train_datagen.flow_from_directory('HandGestureDataset/train',
                                                     class_mode='categorical',
                                                     classes=['NONE', 'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE'])
 
-validation_generator = validation_datagen.flow_from_directory('HandGestureDataset/test',
+validation_generator = validation_datagen.flow_from_directory('HandGestureDataset/validation',
                                                               target_size=(256, 256),
                                                               batch_size=32,
                                                               color_mode='grayscale',
@@ -62,5 +62,5 @@ model.fit(train_generator,
 model_json = model.to_json()
 with open("model.json", "w") as json_file:
     json_file.write(model_json)
-model.save_weights("model.h5")
+model.save_weights("model.weights.h5")
 print("Saved model to disk")
